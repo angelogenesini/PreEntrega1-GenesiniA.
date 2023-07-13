@@ -1,13 +1,8 @@
 class Ejercicios {
-    constructor (ejercicio, peso, rpe){
+    constructor (ejercicio){
     this.ejercicio = ejercicio
-    this.peso = peso
-    this.rpe = rpe
     }
 
-    sumaPesoKg () {
-        return this.peso * 4;
-    }
 
     calcularRpe (){
         let entrada = prompt ("ingresar RPE");
@@ -58,9 +53,10 @@ class Ejercicios {
 function crearEjercicios (){
     let ejercicio = prompt ("ingrese ejercicio")
     let peso = Number (prompt("ingrese peso"))
-    let rpe = Number (prompt ("ingrese RPE"))
-    let ejercicios = new Ejercicios (ejercicio, peso, rpe)
+    let ejercicios = new Ejercicios (ejercicio, peso)
+    ejercicios.calcularRpe()
     return ejercicios; 
+
 }
 
 let i = 1
@@ -69,3 +65,4 @@ while (i<=4){
     i++;
     console.log(ejercicios); 
 }
+
