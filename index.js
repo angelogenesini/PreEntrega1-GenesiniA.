@@ -1,6 +1,7 @@
 class Ejercicios {
-    constructor (ejercicio){
+    constructor (ejercicio, peso){
     this.ejercicio = ejercicio
+    this.peso = peso
     }
 
 
